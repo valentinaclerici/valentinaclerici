@@ -1,0 +1,487 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+/************LIGHT MODE**************/
+body.light-mode {
+    background-color: #EEEEEE;
+    color:  #656464;
+}
+header.light-mode{
+    background-color: #E0E0E0;
+    color: #656464;
+}
+.aside-container.light-mode {
+    background-color: #FAFAFA;
+    color:  #656464;
+}
+header .nav-button.light-mode {
+    padding: 5px;
+    background-color: #E0E0E0;
+    border: 1px solid #E0E0E0;
+    color:  #656464;
+}
+header .nav-button:hover.light-mode {
+background-color: #bdbdbd;
+border: 1px solid #bdbdbd;
+} 
+
+input.aside-url-input.light-mode, input.background-color.light-mode, select.background-fx.light-mode, select.text-font-input.light-mode, input.text-size-input.light-mode, .text-font-input.light-mode, #textAreaBottom.light-mode, input.text-color-input.light-mode, input.text-background-input.light-mode, #outlineNone.light-mode, #outlineLight.light-mode, #outlineDark.light-mode, input.padding-input.light-mode, select.lineheight-input.light-mode, #textAreaTop.light-mode, .filters-reset-button.light-mode {
+    background-color: #bdbdbd;
+    border: 1px solid #bdbdbd;
+}
+.aside-filters.light-mode {
+background-color: #bdbdbd;
+border: 1px solid #bdbdbd;
+}
+
+
+/**HIDDEN ASIDE**/
+.hidden-aside {
+    display: none;
+}
+
+/** BODY **/
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 100%;
+    font-weight: 900;
+    background-color: #30343F;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+/************HEADER**************/
+
+header {
+width: 100vw;
+height: 20%;
+color: white;
+background-color: #191E2B;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+header .title {
+    margin-top: 10px;
+}
+
+header .nav-button-container {
+    padding: 8px;
+}
+
+header .nav-button {
+    padding: 5px;
+    background-color: #191E2B;
+    border: 1px solid #191E2B;
+    color: white;
+    border-radius: 5px;
+    font-size: 12px;
+}
+header .nav-button:hover {
+    background-color: #4E5565;
+    border: 1px solid #4E5565;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.nav-button-container i{
+    margin: 2px;
+}
+
+
+/************BODY**************/
+main {
+    width: 100vw;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: space-between;
+}
+/*MEME-CONTAINER*/
+.meme-container {
+width: 35vw;
+height: 80vh;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+position: relative;
+}
+.meme-image {
+background-color: black;
+width: 100%;
+height: 100%;
+}
+
+.top-text, .bottom-text{
+    font-family: Impact;
+    font-size: 300%;
+    font-weight: 900;
+    padding: 19px 50px;
+    background-color: white;
+    color: black;
+    width: 100%;
+    height: 20%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/************ASIDE**************/
+
+
+.aside-container {
+    background-color: #191E2B;
+    color: white;
+    height: 100%;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 9999;
+    top:0;
+    right:0;
+    overflow: auto;
+}
+#closeAsideButton {
+    width: 20%;
+    height: 20%;
+    background-color:#191E2B;
+    color: #fff;
+    border: 1px solid #191E2B;
+    align-self: flex-end;
+    margin-right: 2px;
+    margin-top: 10px;
+}
+#closeAsideButton:hover {
+  font-size: 1em;
+}
+
+
+
+.aside-image, .aside-text, .aside-text-font {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.hidden-text {
+    display: none;
+    visibility: hidden;
+}
+
+h2 {
+font-size: 1em;
+font-weight: 900;
+padding: 0px 10px;
+}
+
+.aside-url {
+display: flex;
+flex-direction: column;
+width: 90%;
+justify-content: center;
+}
+
+h3{
+font-size: 0.7em;
+margin: 10px;
+margin-bottom: 7px;
+}
+
+/******** ASIDE IMAGEN ********/
+
+input, .outline-box button, .lineheight-input {
+background-color: #30343F;
+border: 1px solid #30343F;
+border-radius: 4px;
+color: #fff;
+}
+
+.aside-background {
+width: 90%;
+display: flex;
+flex-direction: column;
+justify-self: space-between;
+}
+
+.color-input{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.background-color, .background-fx {
+    width: 45%;
+    color: white;
+    background-color: #30343F;
+    border: 1px solid #30343F;
+    border-radius: 4px;
+}
+.aside-filters {
+width: 90%;
+display: flex;
+flex-direction: column;
+justify-self: flex-start;
+}
+label {
+    font-size: 0.6em;
+    margin-top: 10px;
+}
+
+fieldset {
+    border-color: transparent;
+}
+
+input[type='range'] {
+    width: 100%;
+    height: 8px;
+    font-size: 0.7em;
+    margin-top: 7px;
+    background-color: #4E5565;
+    border-radius: 10px;
+    appearance: unset;
+}
+input[type='range']::-webkit-slider-runnable-track {
+    height: 8px;
+    border: none;
+    border-radius: 10px;
+}
+input[type='range']::-webkit-slider-thumb {
+width: 15px;
+height: 15px;
+background-color:  #fff;
+border: 1px solid #fff;
+border-radius: 50%;
+margin-top: -4.5px;
+-webkit-appearance: none;
+}
+
+.filters-reset-button {
+    padding: 5px;
+    margin-top: 15px;
+    background-color: #4E5565;
+    border: 1px solid #4E5565;
+    color: white;
+    border-radius: 5px;
+    font-size: 12px;
+}
+input[type=range]:focus{
+    background-color: #8d8f92;   
+}
+.filters-reset-button:hover {
+    background-color: #8d8f92;
+    border: 1px solid #8d8f92;
+    border-radius: 5px;
+}
+
+/******** ASIDE TEXTO ********/
+textarea, .text-font-input {
+    width: 100%;
+    height: 30px;
+    font-size: 0.8em;
+    font-family: sans-serif;
+    border-radius: 5px;
+    background-color: #30343F; 
+    color: #fff;
+    border: 1 px solid  #30343F;
+    padding: 7px 5px;
+}
+textarea:hover, .outline-box button:hover {
+    background-color: #4E5565;
+    border: 1 px solid #4E5565;
+    border-radius: 5px;
+    text-decoration: none;
+}
+textarea::-webkit-scrollbar {
+    display: none;
+}
+textarea:focus {
+    background-color: #4E5565;
+    border: 1 px solid #4E5565;
+    border-radius: 5px;
+}
+.align-font-container {
+width: 90%;
+display: flex;
+flex-direction: row;
+justify-self: space-between;
+margin-top: 15px;
+
+}
+.text-size-input {
+    width: 50%; 
+    margin-right: 10px;
+    color: #fff;
+}
+.align-button {
+    width: 50%; 
+}
+.align-button button {
+    width: 30%;
+    font-size: 0.7em;
+}
+.color-and-background-container {
+width: 90%;
+display: flex;
+flex-direction: row;
+}
+
+.text-color-input{
+    width: 90%;
+    display: flex;
+}
+.text-background-input{
+    width: 90%;
+    height: 40%;
+    display: flex;
+    margin-left: 10px;
+    color: #fff;
+}
+.text-color, .text-background{
+    width: 50%;
+    justify-content: center;
+}
+.outline-text-container {
+    width: 100%;
+    display: flex;  
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.outline-box{
+display: flex;  
+flex-direction: row;
+justify-content: space-between;
+margin-left: 10px;
+margin-right: 10px;
+} 
+.outline-box button {
+    justify-items: center;
+    width: 30%;
+    padding: 4px;
+    font-size: 0.8em;
+    color:#fff
+    
+}
+.lineheight-input, .padding-input {
+width: 90%;
+height: 40%;
+margin-left: 5%;
+}
+
+.transparent-text {
+    background-color: transparent;
+    position: absolute;
+
+}
+
+/******** DOWNLOAD BUTTON ********/
+
+.download-button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #2e7d32;
+    font-family: 'Open Sans', sans-serif;
+    border: 1px solid #2e7d32;
+    border-radius: 5px;
+    color: #fff;
+}
+.download-button i {
+    margin-right: 5px;
+}
+.download-button:hover {
+    background-color: #246327;
+    border: 1px solid #246327;
+}
+
+/********RESPONSIVE******/
+@media (min-width: 768px and max-width: 1024px) {
+    body {
+        font-size: 1.3em;
+        height: max-content;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .nav-button-container {
+        width: 40%;
+    }
+
+    header {
+        width: 100%;
+        padding: 0px;
+        height: 5vh;
+    }
+
+    header button {
+        width: 30%;
+        font-size: 1.6em;
+    }
+
+
+    label {
+        font-size: 1em;
+        margin-bottom: 5px;
+    }
+    .aside-container {
+        align-items: space-between;
+        font-size: 1em;
+        height: 100%;
+    width: 25%;
+    z-index: 9999;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: auto;
+    display: unset;
+    }
+
+    #closeAsideButton {
+        display: unset;
+        font-size: 1.6em;
+        height: 1vh;
+    }
+    h2 {
+        text-align: center;
+        font-size: 1.6em;
+    }
+    .font-style{
+        width: 30%;
+    }
+    .margin-text{
+        margin: 10px 0px;
+    }
+
+    .container-text {
+        margin-top: 0px;
+    }
+    #asideText {
+        width: 90%;
+        height: 100%;
+        margin: 5%
+    }
+   
+.aside-top-text, .aside-bottom-text {
+    width: 95%;
+} 
+.meme-container {
+    width: 60%;
+    height: 60%;
+}
+} 

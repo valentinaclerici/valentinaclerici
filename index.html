@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href=./CSS/style.css>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!--HEADER-->
+    <header>
+        <h1 class="title">Generador de Memes</h1>
+        <nav class="nav-button-container">
+            <button id="navButtonIm" class="nav-button"><i class="fa-regular fa-image"></i>Imagen</button>
+            <button id="navButtonTxt" class="nav-button"><i class="fa-solid fa-font"></i>Texto</button>
+            <button id="lightButton" class="nav-button"><i class="fa-regular fa-lightbulb"></i> <span id="lightModeButton" class="light-mode-button light">Claro</span></button>
+        </nav>
+    </header>
+    
+    <!--MEME CONTAINER-->
+    <div class="meme-container">
+        <p class="top-text">TOP TEXT</p> 
+        <div class="meme-image"></div>
+        <p class="bottom-text">BOTTOM TEXT</p>
+        
+        <!--********* ASIDE *********-->
+        <aside class="aside-container">
+            <button type="button" id="closeAsideButton">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <!--********* ASIDE IMAGEN *********-->
+                <article class="aside-image">
+                    <h2 class="aside-image-title">IMAGEN</h2>
+                    <section class="aside-url">
+                        <h3 class="aside-url-title">URL</h3>
+                        <input type="text" id="url" class="aside-url-input">
+                    </section>
+                
+                <!-- ASIDE IMAGEN COLOR Y EFECTO FONDO -->
+                    <section class="aside-background"> 
+                        <h3 class="aside-title">FONDO</h3>
+                        <div class="color-input">
+                            <input type="color" value="#EAEAEA" class="background-color">
+                            <select class="background-fx">
+                                <option value="unset">Ninguno</option>
+                                <option value="lighten">Aclarar</option>
+                                <option value="darken">Oscurecer</option>
+                                <option value="difference">Diferencia</option>
+                                <option value="luminosity">Luminosidad</option>
+                                <option value="multiply">Multiplicar</option>
+                            </select>
+                        </div>
+                    </section>
+               
+                <!--ASIDE IMAGEN FILTROS -->
+                    <section class="aside-filters"> 
+                        <h3 class="aside-filters-title">FILTROS</h3>
+                        <label for="brightnessSlider">Brillo</label>
+                        <input type="range" id="brightnessSlider" class="input-filter" data-property="brightness" min="0"
+                        max="1" step="0.1" value="1">
+                        <label for="opacitySlider">Opacidad</label>
+                        <input type="range" id="opacitySlider" class="input-filter" data-property="opacity" min="0" max="1"
+                        step="0.1" value="1">
+                        <label for="contrastSlider">Contraste</label>
+                        <input type="range" id="contrastSlider" class="input-filter" data-property="contrast" min="100"
+                        max="1000" step="1" value="100">
+                        <label for="blurSlider">Desenfoque</label>
+                        <input type="range" id="blurSlider" class="input-filter" data-property="blur" min="0" max="10"
+                        step="0.1" value="0">
+                        <label for="grayScaleSlider">Escala de Grises</label>
+                        <input type="range" id="grayScaleSlider" class="input-filter" data-property="grayscale" min="0"
+                        max="100" step="1" value="0">
+                        <label for="sepiaSlider">Sepia</label>
+                        <input type="range" id="sepiaSlider" class="input-filter" data-property="sepia" min="0" max="100"
+                        step="1" value="0">
+                        <label for="hueRotateSlider">Hue</label>
+                        <input type="range" id="hueRotateSlider" class="input-filter" data-property="hue-rotation" min="0"
+                        max="359" step="1" value="0">
+                        <label for="saturateSlider">Saturado</label>
+                        <input type="range" id="saturateSlider" class="input-filter" data-property="saturation" min="100"
+                        max="1000" step="10" value="100">
+                        <label for="invertSlider">Negativo</label>
+                        <input type="range" id="invertSlider" class="input-filter" data-property="invert" min="0" max="1"
+                        step="0.1" value="0">
+                        <button class="filters-reset-button">Restablecer Filtros</button>
+                    </section>            
+                </article> 
+            
+            
+            <!-- FIN ASIDE IMAGEN -->
+            
+            <!-- ********* ASIDE TEXTO ********* -->
+        <div id="asideText" class="hidden-aside">    
+            <article class="aside-text">
+                <h2 class="aside-text-title">TEXTO</h2>
+                <section class="aside-top-text">
+                    <h3 class="aside-top-text-title">SUPERIOR</h3>
+                    <textarea id="textAreaTop" class="aside-top-text-input">TOP TEXT</textarea>
+                    <div class="checkbox-box>">
+                        <input class="top-text-checkbox" type="checkbox">
+                        <label for="no-top-text-checkbox">Sin texto
+                            superior</label>
+                        </div>
+                        
+                    </section>
+                    <section class="aside-bottom-text">
+                        <h3 class="aside-bottom-text-title">INFERIOR</h3>
+                        <textarea id="textAreaBottom" class="aside-bottom-text-input">BOTTOM TEXT</textarea>
+                        <div class="checkbox-box>">
+                            <input class="bottom-text-checkbox" type="checkbox">
+                            <label for="bottom-text-checkbox">Sin texto
+                                inferior</label>
+                            </div>
+                    </section>
+                        <!-- FUENTE -->
+                        <h3>FUENTE</h3>
+                        <section class="aside-text-font">
+                            <select class="text-font-input">
+                                <option value="Arial">Arial</option>
+                                <option value="Arial Black">Arial Black</option>
+                                <option value="American Typewriter">American Typewriter</option>
+                                <option value="Andale Mono">Andale Mono</option>
+                                <option value="Comic Sans MS">Comic Sans MS</option>
+                                <option value="Helvetica">Helvetica</option>
+                                <option value="Impact" selected="">Impact</option>
+                                <option value="Verdana">Verdana</option>
+                                <option value="Times New Roman">Times New Roman</option>
+                            </select>
+                            <div class="align-font-container">
+                                <input type="number" class="text-size-input"  min="12" value="40">
+                                <div class="align-button">
+                                    <button class="align-btn-left"><i class="fas fa-align-left"></i></button>
+                                    <button class="align-btn-center"><i class="fas fa-align-center"></i></button>
+                                    <button class="align-btn-right"><i class="fas fa-align-right"></i></button>
+                                </div>
+                            </div>
+                            <div class="color-and-background-container">
+                                <div class="text-color">
+                                    <h3 class="text-color-title">COLOR</h3>
+                                    <input class="text-color-input" type="color" value="#000000">
+                                </div>
+                                <div class="text-background">
+                                    <h3 class="text-background-title">FONDO</h3>
+                                    <input class="text-background-input" type="color" value="#FFFFFF">
+                                </div>
+                            </div>
+                            <div class="checkbox-box>">
+                                <input type="checkbox" class="text-background-checkbox">
+                                <label for="text-background-checkbox">Fondo
+                                    transparente</label> 
+                            </div>
+                    </section>        
+                    <section class="outline-text-container">
+                                    <h3> CONTORNO</h3> 
+                                    <div class="outline-box">
+                                        <button id="outlineNone" class="outline-buttons">Ninguno</button>
+                                        <button id="outlineLight" class="outline-buttons">Claro</button>
+                                        <button id="outlineDark" class="outline-buttons">Oscuro</button>
+                                    </div>
+                                    <div class="padding-text-container">
+                                    <h3>ESPACIADO</h3>
+                                    <input type="number" class="padding-input" value="10" min="10" max="50">
+                                    </div>
+                                <div class="lineheight-text-container">
+                                    <h3>INTERLINEADO</h3>
+                                    <select class="lineheight-input">
+                                        <option value="0.8">0.8</option>
+                                        <option value="1.2" selected>1.2</option>
+                                        <option value="1.5">1.5</option>
+                                        <option value="2">2</option>
+                                        <option value="2.5">2.5</option>
+                                    </select>
+                                    
+                            
+                                
+                    </section>
+                            
+            </article>
+        </div> 
+
+                        </aside>
+                        <button type="button" class="download-button"><i class="fas fa-download button-icon-text" aria-hidden="true"></i>DESCARGAR</button>
+                        <script src="script.js"></script>
+                    </body>
+                    </html> 
